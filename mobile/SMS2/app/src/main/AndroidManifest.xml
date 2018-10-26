@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.onboard.sms">
 
+    <uses-permission android:name="android.permission.RECEIVE_SMS"></uses-permission>
+    <uses-permission android:name="android.permission.READ_SMS"></uses-permission>
+<uses-permission android:name="android.permission.SEND_SMS"></uses-permission>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -17,7 +20,14 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name=".SmsReceiver"></receiver>
+        <receiver android:name=".SmsReceiver">
+
+            <intent-filter>
+
+
+            </intent-filter>
+
+        </receiver>
     </application>
 
 </manifest>
